@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Çalışması</title>
+
+</head>
+
+<body>
+<div>
+<canvas id="canvas" width="450" height="250">
+</canvas>
+<canvas id="canvas2" width="450" height="250">
+</canvas>
+<canvas id="canvas3" width="450" height="250">
+</canvas>
+</div>
+<script language="javascript" type="text/javascript">
+
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d"); //canvas içerisindeki çizim kodlarını getirir.
+	
+	ctx.fillStyle = "#00DD00";
+	ctx.fillRect(45,45,175,75);
+	
+	ctx.strokeStyle="#123456"; //dış çizgi
+	ctx.lineWidth = 5;
+	ctx.strokeRect(45,45,175,75);
+	
+	
+	ctx.lineWidth = 2;
+	ctx.fillStyle="#540002";
+	ctx.arc(300,100,30,0,Math.PI*2,true);
+	ctx.fill();
+	
+	
+	ctx.moveTo(450,100);
+	ctx.lineTo(375,30);
+	ctx.lineTo(200,30);
+	ctx.stroke();
+	
+	
+</script>
+</body>
+</html>
